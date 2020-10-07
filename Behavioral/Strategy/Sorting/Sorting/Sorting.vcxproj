@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="DataSorter.cpp" />
+    <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="iSortingStrategy.cpp" />
     <ClCompile Include="SelectionSort.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -148,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="BubbleSort.hxx" />
     <ClInclude Include="DataSorter.h" />
+    <ClInclude Include="InsertionSort.hxx" />
     <ClInclude Include="iSortingStrategy.h" />
     <ClInclude Include="SelectionSort.hxx" />
   </ItemGroup>

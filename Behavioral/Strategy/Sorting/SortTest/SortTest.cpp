@@ -2,6 +2,7 @@
 #include "CppUnitTest.h"
 #include "BubbleSort.hxx"
 #include "SelectionSort.hxx"
+#include "InsertionSort.hxx"
 #include "DataSorter.h"
 #include <vector>
 using namespace std;
@@ -17,7 +18,7 @@ namespace SortTest
 		{
 			vector<int> v{ -2,-4,1,0 };
 			SelectionSort ssort;
-			BubbleSort bsort;
+			InsertionSort bsort;
 			DataSorter dst(v);
 			dst.setStrategy(&bsort);
 			dst.sort();
@@ -32,7 +33,7 @@ namespace SortTest
 		{
 			vector<int> v{ -1,4,-2,3 };
 			SelectionSort ssort;
-			BubbleSort bsort;
+			InsertionSort bsort;
 			DataSorter dst(v);
 			dst.setStrategy(&bsort);
 			dst.sort();
@@ -47,7 +48,7 @@ namespace SortTest
 		{
 			vector<int> v{ 4,3,-1,-2 };
 			SelectionSort ssort;
-			BubbleSort bsort;
+			InsertionSort bsort;
 			DataSorter dst(v);
 			dst.setStrategy(&bsort);
 			dst.sort();
@@ -62,7 +63,7 @@ namespace SortTest
 		{
 			vector<int> v{  2,8,4};
 			SelectionSort s,ssort;
-			BubbleSort bsort;
+			InsertionSort bsort;
 			DataSorter dst(v);
 			dst.setStrategy(&bsort);
 			dst.sort();
@@ -76,7 +77,7 @@ namespace SortTest
 		{
 			vector<int> v{ 1,5,5 };
 			SelectionSort s, ssort;
-			BubbleSort bsort;
+			InsertionSort bsort;
 			DataSorter dst(v);
 			dst.setStrategy(&bsort);
 			dst.sort();
@@ -90,7 +91,7 @@ namespace SortTest
 		{
 			vector<int> v{ 2,2,1 };
 			SelectionSort s, ssort;
-			BubbleSort bsort;
+			InsertionSort bsort;
 			DataSorter dst(v);
 			dst.setStrategy(&bsort);
 			dst.sort();
@@ -104,7 +105,7 @@ namespace SortTest
 		{
 			vector<int> v{ 4,2 };
 			SelectionSort s, ssort;
-			BubbleSort bsort;
+			InsertionSort bsort;
 			DataSorter dst(v);
 			dst.setStrategy(&bsort);
 			dst.sort();
@@ -117,7 +118,7 @@ namespace SortTest
 		{
 			vector<int> v{ 3,4 };
 			SelectionSort s, ssort;
-			BubbleSort bsort;
+			InsertionSort bsort;
 			DataSorter dst(v);
 			dst.setStrategy(&bsort);
 			dst.sort();
@@ -130,7 +131,7 @@ namespace SortTest
 		{
 			vector<int> v{ 5,5 };
 			SelectionSort s, ssort;
-			BubbleSort bsort;
+			InsertionSort bsort;
 			DataSorter dst(v);
 			dst.setStrategy(&bsort);
 			dst.sort();
@@ -144,7 +145,7 @@ namespace SortTest
 		{
 			vector<int> v{ 5 };
 			SelectionSort s, ssort;
-			BubbleSort bsort;
+			InsertionSort bsort;
 			DataSorter dst(v);
 			dst.setStrategy(&bsort);
 			dst.sort();
@@ -156,13 +157,27 @@ namespace SortTest
 		{
 			vector<int> v{  };
 			SelectionSort s, ssort;
-			BubbleSort bsort;
+			InsertionSort bsort;
 			DataSorter dst(v);
 			dst.setStrategy(&bsort);
 			dst.sort();
 			Assert::AreEqual((size_t)0, v.size());
 		}
 
+		TEST_METHOD(Test12)
+		{
+			vector<int> v{ 15,14,18,13 };
+			SelectionSort ssort;
+			InsertionSort bsort;
+			DataSorter dst(v);
+			dst.setStrategy(&bsort);
+			dst.sort();
+			Assert::AreEqual((size_t)4, v.size());
+			Assert::AreEqual(13, v[0]);
+			Assert::AreEqual(14, v[1]);
+			Assert::AreEqual(15, v[2]);
+			Assert::AreEqual(18, v[3]);
+		}
 
 
 	};
