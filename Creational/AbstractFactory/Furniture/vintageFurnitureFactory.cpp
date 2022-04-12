@@ -4,12 +4,12 @@
 #include "vintageCoffeeTable.h"
 iChair* vintageFurnitureFactory::createChair()
 {
-	return new vintageChair();
+	return new vintageChair{};
 }
 
 iSofa* vintageFurnitureFactory::createSofa()
 {
-	return new VintageSofa();
+	return new VintageSofa{};
 }
 
 iCoffeeTable* vintageFurnitureFactory::createCoffeeTable()

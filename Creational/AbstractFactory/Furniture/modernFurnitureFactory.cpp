@@ -15,6 +15,9 @@ iSofa* moderFurnitureFactory::createSofa()
 }
 
 iCoffeeTable* moderFurnitureFactory::createCoffeeTable()
-{
+
+
+
+
 	return new modernCoffeeTable;
 }
